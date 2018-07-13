@@ -1,0 +1,34 @@
+.controlBar {
+    min-width: 950px;
+}
+
+.controlBar-item {
+    cursor: pointer;
+    text-align:center;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    display:inline-block;
+    background-color: #00AE45;
+    transition: .2s all;
+}
+
+.controlBar-item:hover {
+    transform: translateY(-2px);
+    background-color: #08C75E;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.controlBar-item:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.controlBar-item:focus {
+    transform: translateY(2px);
+}
+
+.controlBar-item:active, .bcontrolBar-item:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+}
