@@ -27,12 +27,14 @@
     {
         "title": "Twitch",
         "href": "#",
-        "color": "#6441a4"
+        "color": "#6441a4",
+        "icon": "logo-twitch"
     },
     {
         "title": "Dropbox",
         "href": "#",
-        "color": "#0071e0"
+        "color": "#0071e0",
+        "icon" : "logo-dropbox"
     },
     {
         "title": "DHost",
@@ -42,7 +44,8 @@
     {
         "title": "Mail",
         "href": "#",
-        "color": "#3675b4"
+        "color": "#3675b4",
+        "icon": "mail-unread"
     },
     {
         "title": "Amazon",
