@@ -1,0 +1,23 @@
+.todoInput {
+    width:90%;
+    background: rgba(255,255,255,0.2);
+    border:none;
+    height:50px;
+    padding-left: 30px;
+    font-size: 1.3rem;
+    padding-bottom:0px;
+}
+
+.todoInput::placeholder {
+    color:black;
+    font-size: 1.3rem;
+}
+
+.todoButton {
+    width:10%;
+    height:50px;
+    border:none;
+    padding:0px;
+
+    background:rgba(255,255,255,0.2);
+}

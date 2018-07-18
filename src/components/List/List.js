@@ -7,11 +7,12 @@ export default class List extends Component {
 
     render(){
         return(
-            <div className="animated">
-                {
                 list.map((list) => {
                     return (
-                                <a className="listLink" style={{backgroundColor: list.color}} href={list.href}>
+                                <a target="_blank" 
+                                    className="listLink" 
+                                    style={{backgroundColor: list.color}} 
+                                    href={list.href}>
                                     {
                                         list.icon ? (
                                             <Ionicon icon={list.icon} fontSize="50px" />
@@ -20,11 +21,8 @@ export default class List extends Component {
                                             )
                                     }
                                 </a>
-                                );
-                            
+                            );
                 })
-                }
-            </div>
         )
     }
 }

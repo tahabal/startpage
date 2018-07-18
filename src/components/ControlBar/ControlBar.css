@@ -17,18 +17,30 @@
     color: #fff;
     font-size:1.3rem;
     font-weight: 300;
+    max-height: 63px;
+}
 
+.controlBar-item:not(:last-of-type)::after{
+    content: "ﾠ";
+    border-right: 2px solid #021521;
+    position:absolute;
+    right: 0;
+    z-index:5;
+
+    transition: all .2s;
 }
 
 .controlBar-item:hover {
     transform: translateY(-2px);
     background-color: #334B57;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+    font-size: 1.35rem;
+    font-weight: 400;
 }
 
 .controlBar-item:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+    transform: translateY(2px);
 }
 
 .controlBar-item:focus {

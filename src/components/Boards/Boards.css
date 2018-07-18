@@ -1,0 +1,31 @@
+.boards{
+    display:flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.boardItem {
+    flex: 1;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 411px;
+
+    font-size: 3rem;
+    color: #fff;
+
+    filter: grayscale(55%);
+
+    text-decoration:none;
+    
+    transition: .2s all;
+}
+
+.boardItem:hover {
+    flex:2;
+    color: #fff;
+    text-decoration: none;
+
+    filter: none;
+}

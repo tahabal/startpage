@@ -5,6 +5,8 @@ import SearchBar from "./search_bar";
 import VideoList from "./video_list";
 import VideoDetail from "./video_detail";
 
+import './styles.css';
+
 const API_KEY = "AIzaSyC7wIkoXLAsR3SHWCtfZtVthc2SlTIRLv4";
 
 export default class YoutubeSearch extends Component {

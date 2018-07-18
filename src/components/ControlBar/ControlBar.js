@@ -20,24 +20,15 @@ export default class ControlBar extends Component {
                 <div className="col-md controlBar-item" 
                 onClick={(e) => this.setActive(e, 1)}
                 >
-                    YT
+                    STUFF
                 </div>
                 <div className="col-md controlBar-item"
                 onClick={(e) => this.setActive(e, 2)}
-                >
-                    RDDT
+                >   BOARDS
                 </div>
                 <div className="col-md controlBar-item"
                 onClick={(e) => this.setActive(e, 3)}
-                >   4CH
-                </div>
-                <div className="col-md controlBar-item"
-                onClick={(e) => this.setActive(e, 4)}
-                >   SOC
-                </div>
-                <div className="col-md controlBar-item"
-                onClick={(e) => this.setActive(e, 5)}
-                >   LST
+                >   TO-DO
                 </div>
             </div>
         );

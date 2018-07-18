@@ -1,0 +1,126 @@
+[
+    {
+        "title": "AB",
+        "href": "https://animebytes.tv/",
+        "color": "#ed106a"
+    },
+    {
+        "title": "JSuki",
+        "href": "http://jpopsuki.eu/",
+        "color": "#4aa0e0",
+        "icon": "md-musical-note"
+    },
+    {
+        "title": "OT",
+        "href": "https://oppaiti.me/",
+        "color": "pink",
+        "icon": "md-female"
+    },
+    {
+        "title": "UGC",
+        "href": "https://ultimategamer.club/",
+        "color": "#000",
+        "icon": "md-game-controller-b"
+    },
+    {
+        "title": "PHd",
+        "href": "https://privatehd.to",
+        "color": "#222",
+        "icon": "ios-film"
+    },
+    {
+        "title": "Twitch",
+        "href": "https://twitch.tv/",
+        "color": "#6441a4",
+        "icon": "logo-twitch"
+    },
+    {
+        "title": "Dropbox",
+        "href": "https://www.dropbox.com/",
+        "color": "#0071e0",
+        "icon" : "logo-dropbox"
+    },
+    {
+        "title": "DHost",
+        "href": "https://www.dreamhost.com",
+        "color": "#0073ec"
+    },
+    {
+        "title": "Mail",
+        "href": "#",
+        "color": "#3675b4",
+        "icon": "ios-mail"
+    },
+    {
+        "title": "Amazon",
+        "href": "http://amazon.com",
+        "color": "#ff9000",
+        "icon": "ios-cart"
+    },
+    {
+        "title": "NHen",
+        "href": "https://nhentai.net",
+        "color": "#222"
+    },
+    {
+        "title": "Seedbox",
+        "href": "#",
+        "color": "#8dd69b",
+        "icon": "ios-code-download"
+    },
+    {
+        "title": "Github",
+        "href": "http://github.com",
+        "color": "#000",
+        "icon": "logo-github"
+    },
+    {
+        "title": "Linkedin",
+        "href": "https://linkedin.com/",
+        "color": "#1976b5",
+        "icon": "logo-linkedin"
+    },
+    {
+        "title": "Twitter",
+        "href": "#",
+        "color": "#00aced",
+        "icon": "logo-twitter"
+
+    },
+    {
+        "title": "Reddit",
+        "href": "https://reddit.com",
+        "color": "#ff4500",
+        "icon": "logo-reddit"
+    },
+    {
+        "title": "Facebook",
+        "href": "https://facebook.com",
+        "color": "#3b5998",
+        "icon": "logo-facebook"
+    },
+    {
+        "title": "Youtube",
+        "href": "http://youtube.com",
+        "color": "#ff0000",
+        "icon": "logo-youtube"
+    },
+    {
+        "title": "Whatsapp",
+        "href": "https://web.whatsapp.com",
+        "color": "#25d366",
+        "icon": "logo-whatsapp"
+    },
+    {
+        "title": "Investing",
+        "href": "https://investing.com/",
+        "color": "#110",
+        "icon": "logo-yen"
+    },
+    {
+        "title": "HumbleBundle",
+        "href": "https://humblebundle.com",
+        "color": "#cb272c",
+        "icon": "logo-playstation"
+    }
+]

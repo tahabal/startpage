@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import YoutubeSearch from './YoutubeSearch';
-import Reddit from './Reddit';
-import List from './List';
-import ControlBar from './ControlBar';
+import Boards from './Boards/Boards';
+import Todo from './Todo/Todo';
+import List from './List/List';
+import ControlBar from './ControlBar/ControlBar';
 
 
-var tab = <YoutubeSearch />
+var tab = <List />
 
 class App extends Component {
     constructor(props){
@@ -24,25 +24,16 @@ class App extends Component {
 
         switch (next) {
             case 1:
-                tab = <YoutubeSearch />
+                tab = <List />
                 break;
         
             case 2:
-                tab = <Reddit />
+                tab = <Boards />
                 break;
             
 
             case 3:
-                tab = <YoutubeSearch />
-                break;
-            
-
-            case 4:
-                tab = <YoutubeSearch />
-                break;
-
-            case 5:
-                tab = <List />
+                tab = <Todo />
                 break;
             
             
@@ -61,6 +52,7 @@ class App extends Component {
                 <ControlBar changeTab={this.changeTab}/>
                 {tab}
             </div>
+            
         </div>
       );
     }
