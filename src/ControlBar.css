@@ -1,5 +1,9 @@
 .controlBar {
-    min-width: 950px;
+    max-width: 960px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .controlBar-item {
@@ -8,13 +12,17 @@
     padding-top:1rem;
     padding-bottom:1rem;
     display:inline-block;
-    background-color: #00AE45;
+    background-color: #4c6470;
     transition: .2s all;
+    color: #fff;
+    font-size:1.3rem;
+    font-weight: 300;
+
 }
 
 .controlBar-item:hover {
     transform: translateY(-2px);
-    background-color: #08C75E;
+    background-color: #334B57;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
