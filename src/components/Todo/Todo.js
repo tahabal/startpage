@@ -81,7 +81,10 @@ export default class Todo extends Component{
                             className="todoItem"
                             onClick={() => this.deleteItem(item.id)}>
                         {item.value}
-                            <Moment fromNow className="todoDate">
+                            <Moment 
+                                fromNow 
+                                className="todoDate"
+                                interval={1000}>
                                 {item.date}
                             </Moment>
                         </li>
