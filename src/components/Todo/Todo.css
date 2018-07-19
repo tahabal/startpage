@@ -1,6 +1,6 @@
 .todoInput {
     width:90%;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.5);
     border:none;
     height:50px;
     padding-left: 30px;
@@ -28,7 +28,7 @@
 
     transition: .2s all;
 
-    background:rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.5);
 }
 
 .todoButton:hover {
