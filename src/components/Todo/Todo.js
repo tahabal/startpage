@@ -42,7 +42,7 @@ export default class Todo extends Component{
         const list = [...this.state.list];
     
         // add the new item to the list
-        list.push(newItem);
+        list.unshift(newItem);
     
         // update state with new list, reset the new item input
         this.setState({
