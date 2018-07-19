@@ -7,7 +7,7 @@ import VideoDetail from "./video_detail";
 
 import './styles.css';
 
-const API_KEY = "AIzaSyC7wIkoXLAsR3SHWCtfZtVthc2SlTIRLv4";
+const API_KEY = "insert api here";
 
 export default class YoutubeSearch extends Component {
     constructor(props) {

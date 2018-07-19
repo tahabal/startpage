@@ -6,6 +6,8 @@
     padding-left: 30px;
     font-size: 1.3rem;
     padding-bottom:0px;
+
+    margin-bottom:15px;
 }
 
 .todoInput::placeholder {
@@ -13,11 +15,106 @@
     font-size: 1.3rem;
 }
 
+
 .todoButton {
     width:10%;
     height:50px;
     border:none;
     padding:0px;
+    float:right;
+    position:relative;
+
+    color: black;
+
+    transition: .2s all;
 
     background:rgba(255,255,255,0.2);
+}
+
+.todoButton:hover {
+    font-weight:700;
+}
+
+.todoButton::before {
+    content:"";
+    border-left:1px solid black;
+    position:absolute;
+    font-size: 1rem;
+    left:0;
+    height:25px;
+    transition: all .2s;
+}
+
+.todoButton:hover::before {
+    transform: translateY(3px);
+}
+
+
+.todoList {
+    list-style: none;
+    padding: 0 50px;
+}
+
+.todoItem {
+    position:relative;
+
+    width: 100%;
+    height: 40px;
+    padding-left: 50px;
+    margin-bottom:10px;
+
+    font-size:1.15rem;
+
+    line-height: 40px;
+
+    background:rgba(255,255,255,0.5);
+    color: black;
+}
+
+.todoItem::before {
+    content: "+";
+    font-size:2rem;
+    left:15px;
+    position:absolute;
+    line-height: 33px;
+
+    transition: .2s all;
+
+    transform-origin: 50% 50%;
+}
+
+.todoItem:hover::before {
+    transform:rotate(45deg);
+}
+
+.todoRemove {
+    width:10%;
+    height:40px;
+    border:none;
+    padding:0px;
+    float:right;
+    position:relative;
+
+    font-size: 1rem;
+
+    color: black;
+
+    transition: .2s all;
+
+    background:transparent;
+}
+
+.todoRemove::before {
+    content:"";
+    border-left:1px solid black;
+    position:absolute;
+    font-size: 1rem;
+    left:0;
+    top:10px;
+    height:20px;
+    transition: all .2s;
+}
+
+.todoRemove:hover {
+    font-weight:700;
 }

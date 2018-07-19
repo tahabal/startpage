@@ -18,7 +18,8 @@ export default class Todo extends Component{
         this.setState({ [key]: value });
       }
     
-      addItem() {
+      addItem(e) {
+          e.preventDefault();
         // create a new item
         const newItem = {
           id: 1 + Math.random(),
@@ -49,7 +50,7 @@ export default class Todo extends Component{
 
     render(){
         return(
-            <div className="todo">
+            <form className="todo">
                 <SimpleStorage parent={this} />
 
                 <input
@@ -60,7 +61,7 @@ export default class Todo extends Component{
                     onChange={e => this.updateInput("newItem", e.target.value)}
                 />
                 <button
-                    onClick={() => this.addItem()}
+                    onClick={(e) => this.addItem(e)}
                     disabled={!this.state.newItem.length}
                     className="todoButton"
                 >
@@ -70,16 +71,16 @@ export default class Todo extends Component{
                 <ul className="todoList">
                     {this.state.list.map(item => {
                     return (
-                        <li key={item.id}>
+                        <li key={item.id} className="todoItem">
                         {item.value}
-                        <button onClick={() => this.deleteItem(item.id)}>
+                        <button onClick={() => this.deleteItem(item.id)} className="todoRemove">
                             Remove
                         </button>
                         </li>
                     );
                     })}
                 </ul>
-            </div>
+            </form>
         );
     }
 }

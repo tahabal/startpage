@@ -19,7 +19,6 @@ class App extends Component {
     }
 
     changeTab(next){
-        console.log(next)
         this.setState({activeTab: next})
 
         switch (next) {
