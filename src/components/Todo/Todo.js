@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import SimpleStorage from  'react-simple-storage';
 import Moment from 'react-moment';
+import {
+    CSSTransition,
+    TransitionGroup,
+  } from 'react-transition-group';
+import uuid from 'uuid';
 
 import 'moment-timezone';
 
@@ -26,8 +31,9 @@ export default class Todo extends Component{
           e.preventDefault();
         // create a new item
         let date = moment();
+        let id = uuid();
         const newItem = {
-          id: 1 + Math.random(),
+          id: id,
           value: this.state.newItem.slice(),
           date: date
         };
@@ -75,21 +81,31 @@ export default class Todo extends Component{
                 </button>
 
                 <ul className="todoList">
-                    {this.state.list.map(item => {
-                    return (
-                        <li key={item.id} 
-                            className="todoItem"
-                            onClick={() => this.deleteItem(item.id)}>
-                        {item.value}
-                            <Moment 
-                                fromNow 
-                                className="todoDate"
-                                interval={1000}>
-                                {item.date}
-                            </Moment>
-                        </li>
-                    );
-                    })}
+                    <TransitionGroup
+                        className="todo-list"
+                        component={null}
+                    >
+                        {
+                            this.state.list.map((item) => (
+                                <CSSTransition
+                                    key={item.id}
+                                    timeout={300}
+                                    classNames="fade"
+                                >
+                                    <li className="todoItem"
+                                        onClick={() => this.deleteItem(item.id)}>
+                                    {item.value}
+                                        <Moment 
+                                            fromNow 
+                                            className="todoDate"
+                                            interval={1000}>
+                                            {item.date}
+                                        </Moment>
+                                    </li>
+                                </CSSTransition>
+                            ))
+                        }
+                    </TransitionGroup>
                 </ul>
             </form>
         );

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700');
 
 
+*:focus {
+    outline: none;
+}
+
 .App {
   height:100vh;
   overflow: hidden;
@@ -31,13 +35,38 @@
   background-image: url('../assets/gif/pixels8.gif');
   background-position: left bottom;
   opacity: 0.3;
+  transition: all .2s;
 }
+
+.lightsOn {
+    opacity:1 !important;
+}
+
+.lightSwitch {
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    right: 0;
+    transform: scale(0.5);
+    text-align:right;
+    
+    color: #fff;
+}
+
+.lightSwitch span {
+    width: 200px;
+    font-size:1.3rem;
+    margin-bottom:10px;
+    display:block;
+}
+
 
 .time {
     position:absolute;
     right:30px;
     bottom:30px;
     color: white;
+    z-index: 6;
 }
 
 .hour {

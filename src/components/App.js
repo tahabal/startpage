@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SimpleStorage from  'react-simple-storage';
+import Switch from 'react-switch';
 import Moment from 'react-moment';
 import 'moment-timezone';
 
@@ -11,15 +13,22 @@ import ControlBar from './ControlBar/ControlBar';
 
 
 var tab = <List />
+var classes = "bg-gif"
 
 class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            activeTab: 1
+            activeTab: 1,
+            lights: false
         }
 
         this.changeTab = this.changeTab.bind(this)
+        this.handleLights = this.handleLights.bind(this)
+    }
+
+    handleLights(lights) {
+        this.setState({lights})
     }
 
     changeTab(next){
@@ -50,7 +59,18 @@ class App extends Component {
     render() {
       return (
         <div className="App">
-            <div className="bg-gif">&nbsp;</div>
+            <div className={this.state.lights ? "bg-gif lightsOn" : "bg-gif"}>&nbsp;</div>
+            <div className="lightSwitch">
+                <SimpleStorage parent={this} />
+                <label htmlFor="lights">
+                    <span>{this.state.lights ? "Too bright?" : "Too dark?"}</span>
+                    <Switch
+                        onChange={this.handleLights}
+                        checked={this.state.lights}
+                        id="lights"
+                    />
+                </label>
+            </div>
             <div className="content">
                 <ControlBar changeTab={this.changeTab}/>
                 {tab}
