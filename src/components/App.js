@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Transition, animated } from 'react-spring'
+
 import SimpleStorage from  'react-simple-storage';
 import Switch from 'react-switch';
 import Moment from 'react-moment';
@@ -12,14 +14,17 @@ import List from './List/List';
 import ControlBar from './ControlBar/ControlBar';
 
 
-var tab = <List />
-var classes = "bg-gif"
+const tabs = [
+    style => <animated.div style={{ ...style}}><List /></animated.div>,
+    style => <animated.div style={{ ...style}}><Boards /></animated.div>, 
+    style => <animated.div style={{ ...style}}><Todo /></animated.div>
+]
 
 class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            activeTab: 1,
+            activeTab: 0,
             lights: false
         }
 
@@ -32,29 +37,8 @@ class App extends Component {
     }
 
     changeTab(next){
-        this.setState({activeTab: next})
-
-        switch (next) {
-            case 1:
-                tab = <List />
-                break;
-        
-            case 2:
-                tab = <Boards />
-                break;
-            
-
-            case 3:
-                tab = <Todo />
-                break;
-            
-            
-            default:
-                break;
-        }
+        this.setState({activeTab: next -1})
     }
-
-
 
     render() {
       return (
@@ -67,13 +51,21 @@ class App extends Component {
                     <Switch
                         onChange={this.handleLights}
                         checked={this.state.lights}
+                        offHandleColor="#000308"
+                        offColor="#01111b"
                         id="lights"
                     />
                 </label>
             </div>
             <div className="content">
                 <ControlBar changeTab={this.changeTab}/>
-                {tab}
+                <Transition
+                    native
+                    from={{ opacity: 0 }}
+                    enter={{ opacity: 1 }}
+                    leave={{ opacity: 0 }}>
+                    {tabs[this.state.activeTab]}
+                </Transition>
             </div>
             <div class="time">
                 <div class="hour">
