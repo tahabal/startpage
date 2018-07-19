@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
+import 'moment-timezone';
+
+
 import './App.css';
 import Boards from './Boards/Boards';
 import Todo from './Todo/Todo';
@@ -51,7 +55,23 @@ class App extends Component {
                 <ControlBar changeTab={this.changeTab}/>
                 {tab}
             </div>
-            
+            <div class="time">
+                <div class="hour">
+                    <Moment 
+                        interval={1000}
+                        format="HH:mm" />
+                </div>
+                <div class="day">
+                    <Moment
+                        interval={60000}
+                        format="dddd" />
+                </div>
+                <div class="date">
+                    <Moment 
+                        format="DD/MM/YY"
+                        interval={60000}/>
+                </div>
+            </div>
         </div>
       );
     }

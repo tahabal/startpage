@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import SimpleStorage from  'react-simple-storage';
+import Moment from 'react-moment';
+
+import 'moment-timezone';
 
 import './Todo.css';
 
-export default class Todo extends Component{
+const moment = require('moment');
 
+export default class Todo extends Component{
     constructor(props) {
         super(props)
         this.state = {
@@ -21,9 +25,11 @@ export default class Todo extends Component{
       addItem(e) {
           e.preventDefault();
         // create a new item
+        let date = moment();
         const newItem = {
           id: 1 + Math.random(),
-          value: this.state.newItem.slice()
+          value: this.state.newItem.slice(),
+          date: date
         };
     
         // copy current list of items
@@ -75,6 +81,9 @@ export default class Todo extends Component{
                             className="todoItem"
                             onClick={() => this.deleteItem(item.id)}>
                         {item.value}
+                            <Moment fromNow className="todoDate">
+                                {item.date}
+                            </Moment>
                         </li>
                     );
                     })}
