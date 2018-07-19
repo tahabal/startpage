@@ -71,11 +71,10 @@ export default class Todo extends Component{
                 <ul className="todoList">
                     {this.state.list.map(item => {
                     return (
-                        <li key={item.id} className="todoItem">
+                        <li key={item.id} 
+                            className="todoItem"
+                            onClick={() => this.deleteItem(item.id)}>
                         {item.value}
-                        <button onClick={() => this.deleteItem(item.id)} className="todoRemove">
-                            Remove
-                        </button>
                         </li>
                     );
                     })}

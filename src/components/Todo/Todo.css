@@ -45,9 +45,7 @@
     transition: all .2s;
 }
 
-.todoButton:hover::before {
-    transform: translateY(3px);
-}
+
 
 
 .todoList {
@@ -57,6 +55,7 @@
 
 .todoItem {
     position:relative;
+    cursor: pointer !important;
 
     width: 100%;
     height: 40px;
@@ -71,20 +70,23 @@
     color: black;
 }
 
+.todoItem:hover {
+    cursor: pointer;
+}
+
 .todoItem::before {
     content: "+";
     font-size:2rem;
     left:15px;
     position:absolute;
+    cursor: pointer;
     line-height: 33px;
 
     transition: .2s all;
-
-    transform-origin: 50% 50%;
 }
 
 .todoItem:hover::before {
-    transform:rotate(45deg);
+    transform:scale(1.3) translate(15%, 18%) rotate(135deg);
 }
 
 .todoRemove {

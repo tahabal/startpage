@@ -12,7 +12,10 @@ export default class Boards extends Component{
                     boards.map((board) => {
                         let href = "https://boards.4chan.org" + board.name
                         return(
-                            <a href={href} className="boardItem" style={{backgroundColor: board.color}}>
+                            <a href={href} 
+                                className="boardItem" 
+                                style={{backgroundColor: board.color}}
+                                target="_blank">
                                 {board.name}
                             </a>
                         );
